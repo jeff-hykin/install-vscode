@@ -29,12 +29,12 @@ if not Console.has_command("code")
             if not should_install
                 raise "Visual Studio Code not installed. Please install it manually".red
             else
-                -"sudo apt update"
-                -"sudo apt install software-properties-common apt-transport-https wget"
+                -"yes | sudo apt update"
+                -"yes | sudo apt install software-properties-common apt-transport-https wget"
                 -"wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -"
-                -"sudo add-apt-repository \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\""
-                -"sudo apt update"
-                -"sudo apt install code"
+                -"yes | sudo add-apt-repository \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\""
+                -"yes | sudo apt update"
+                -"yes | sudo apt install code"
             end
         else
             raise <<-HEREDOC.remove_indent.red
