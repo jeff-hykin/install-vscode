@@ -46,3 +46,4 @@ if not Console.has_command("code")
         end
     end
 end
+puts "VS Code should now be installed"
