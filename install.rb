@@ -16,14 +16,11 @@ if not Console.has_command("code")
             if version.major == 16 || version.major == 18
                 should_install = true
             else
-                answer = Console.ask <<-HEREDOC.remove_indent
+                should_install = Console.ask <<-HEREDOC.remove_indent
                     This script is only setup for Ubuntu 18 and 16
                     Would you like to try and use the Ubuntu 18/16 installer
                     even though you're not on Ubuntu 18/16?
                 HEREDOC
-                if answer == true
-                    should_install = true
-                end
             end
             
             if not should_install
